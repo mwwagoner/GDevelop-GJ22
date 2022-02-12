@@ -19,8 +19,8 @@
     "version": "1.0.0",
     "name": "satisfying-stone",
     "author": "",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "windowWidth": 1280,
+    "windowHeight": 720,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
@@ -97,6 +97,15 @@
         "name": "bulletGreen3.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bulletGreen3-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bulletGreen3-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -128,7 +137,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5249999999999996,
+        "zoomFactor": 0.19999999999999937,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -137,14 +146,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 1342,
+          "height": 4578,
           "layer": "",
           "locked": false,
           "name": "Ground",
           "persistentUuid": "fc07f457-daa2-45a7-9321-b20902a58e6f",
-          "width": 1243,
-          "x": -214,
-          "y": -315,
+          "width": 5219,
+          "x": -2302,
+          "y": -2251,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -332,16 +341,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "bulletGreen3",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "bulletGreen3.png",
+                      "image": "bulletGreen3-1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -512,7 +521,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -584,7 +593,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Fire",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -620,7 +629,7 @@
                     "Bullet",
                     "MouseX()",
                     "MouseY()",
-                    "200",
+                    "500",
                     ""
                   ],
                   "subInstructions": []
