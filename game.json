@@ -78,7 +78,7 @@
         "metadata": "",
         "name": "tankGreen.png",
         "smoothed": true,
-        "userAdded": true
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -185,6 +185,8 @@
               "CooldownActive": false
             },
             {
+              "name": "TopDownMovement",
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 400,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -194,20 +196,18 @@
               "ignoreDefaultControls": true,
               "maxSpeed": 200,
               "movementAngleOffset": 0,
-              "name": "TopDownMovement",
               "rotateObject": true,
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "viewpoint": "TopDown"
             }
           ],
           "animations": [
             {
-              "name": "",
+              "name": "tankGreen",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -215,8 +215,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 36.5,
+                        "y": 34.5
                       },
                       "centerPoint": {
                         "automatic": true,
