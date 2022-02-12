@@ -108,6 +108,15 @@
         "name": "bulletGreen3-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ufoBlue.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ufoBlue.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -139,7 +148,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3499999999999994,
+        "zoomFactor": 0.39999999999999936,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -320,18 +329,18 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "mapTile_040.png",
+                      "image": "ufoBlue.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 44.5,
+                        "y": 43.29998779296875
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 43.70001220703125,
+                        "y": 44.100006103515625
                       },
                       "customCollisionMask": []
                     }
@@ -531,7 +540,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -553,6 +562,18 @@
                     "",
                     "Tank.X()",
                     "Tank.Y()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PathfindingBehavior::RotateObject"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "Pathfinding",
+                    "no"
                   ],
                   "subInstructions": []
                 }
@@ -603,7 +624,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Fire",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -662,14 +683,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         }
       ],
       "layers": [
