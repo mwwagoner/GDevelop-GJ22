@@ -183,6 +183,21 @@
               "MaxHealth": 3,
               "IsJustDamaged": false,
               "CooldownActive": false
+            },
+            {
+              "acceleration": 400,
+              "allowDiagonals": true,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "customIsometryAngle": 30,
+              "deceleration": 800,
+              "ignoreDefaultControls": true,
+              "maxSpeed": 200,
+              "movementAngleOffset": 0,
+              "name": "TopDownMovement",
+              "rotateObject": true,
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+              "viewpoint": "TopDown"
             }
           ],
           "animations": [
@@ -251,13 +266,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceXY"
+                    "value": "TopDownMovementBehavior::SimulateUpKey"
                   },
                   "parameters": [
                     "Tank",
-                    "0",
-                    "-100",
-                    ""
+                    "TopDownMovement"
                   ],
                   "subInstructions": []
                 }
@@ -285,13 +298,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceXY"
+                    "value": "TopDownMovementBehavior::SimulateDownKey"
                   },
                   "parameters": [
                     "Tank",
-                    "0",
-                    "100",
-                    ""
+                    "TopDownMovement"
                   ],
                   "subInstructions": []
                 }
@@ -319,13 +330,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceXY"
+                    "value": "TopDownMovementBehavior::SimulateRightKey"
                   },
                   "parameters": [
                     "Tank",
-                    "100",
-                    "0",
-                    ""
+                    "TopDownMovement"
                   ],
                   "subInstructions": []
                 }
@@ -353,13 +362,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceXY"
+                    "value": "TopDownMovementBehavior::SimulateLeftKey"
                   },
                   "parameters": [
                     "Tank",
-                    "-100",
-                    "0",
-                    ""
+                    "TopDownMovement"
                   ],
                   "subInstructions": []
                 }
@@ -402,6 +409,10 @@
         {
           "name": "Health",
           "type": "Health::Health"
+        },
+        {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         }
       ]
     }
