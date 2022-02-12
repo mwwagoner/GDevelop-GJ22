@@ -52,7 +52,17 @@
     "currentPlatform": "GDevelop JS platform"
   },
   "resources": {
-    "resources": [],
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "mapTile_087.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "mapTile_087.png",
+        "smoothed": true,
+        "userAdded": false
+      }
+    ],
     "resourceFolders": []
   },
   "objects": [],
@@ -62,8 +72,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Untitled_32scene",
-      "name": "Untitled scene",
+      "mangledName": "Level1",
+      "name": "Level1",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -82,13 +92,42 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1,
+        "zoomFactor": 0.5249999999999996,
         "windowMask": false
       },
       "objectsGroups": [],
       "variables": [],
-      "instances": [],
-      "objects": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1342,
+          "layer": "",
+          "locked": false,
+          "name": "Ground",
+          "persistentUuid": "fc07f457-daa2-45a7-9321-b20902a58e6f",
+          "width": 1243,
+          "x": -214,
+          "y": -315,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "height": 32,
+          "name": "Ground",
+          "tags": "",
+          "texture": "mapTile_087.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        }
+      ],
       "events": [],
       "layers": [
         {
