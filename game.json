@@ -82,6 +82,31 @@
       },
       {
         "alwaysLoaded": false,
+        "file": "barrelGreen.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "barrelGreen.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tankGreen-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tankGreen-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tankGreen-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tankGreen-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
         "file": "mapTile_040.png",
         "kind": "image",
         "metadata": "",
@@ -91,13 +116,30 @@
       },
       {
         "alwaysLoaded": false,
+        "file": "tankGreen-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tankGreen-1-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "tankGreen-1-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tankGreen-1-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
         "file": "bulletGreen3.png",
         "kind": "image",
         "metadata": "",
         "name": "bulletGreen3.png",
         "smoothed": true,
         "userAdded": true
-      }
+      },
     ],
     "resourceFolders": []
   },
@@ -128,7 +170,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5249999999999996,
+        "zoomFactor": 0.545,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -143,8 +185,8 @@
           "name": "Ground",
           "persistentUuid": "fc07f457-daa2-45a7-9321-b20902a58e6f",
           "width": 1243,
-          "x": -214,
-          "y": -315,
+          "x": -235,
+          "y": -384,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -159,8 +201,8 @@
           "name": "Tank",
           "persistentUuid": "212cd688-a9e9-478e-bf21-43b257e235ef",
           "width": 0,
-          "x": 357,
-          "y": 279,
+          "x": 406.5,
+          "y": 269.5,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -245,7 +287,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "tankGreen.png",
+                      "image": "tankGreen-1-2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
