@@ -66,15 +66,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "../OneDrive/Desktop/topdown-tanks/Spritesheet/sheet_tanks.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "..\\OneDrive\\Desktop\\topdown-tanks\\Spritesheet\\sheet_tanks.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "tankGreen.png",
         "kind": "image",
         "metadata": "",
@@ -117,6 +108,15 @@
         "name": "ufoBlue.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "numeral1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "numeral1.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -148,7 +148,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.39999999999999936,
+        "zoomFactor": 0.4749999999999996,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -198,6 +198,22 @@
           "x": 103,
           "y": 74,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Enemy1Spawn",
+          "persistentUuid": "7dd68bf3-5167-4d09-92cb-70131722f459",
+          "width": 0,
+          "x": 73,
+          "y": -112,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -389,6 +405,46 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Enemy1Spawn",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "numeral1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -398,7 +454,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Movement",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -540,7 +596,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -624,7 +680,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Fire",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
