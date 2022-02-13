@@ -135,6 +135,24 @@
         "name": "playerShip2_damage1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "../game-assets/tower-defense-top-down/Preview.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "..\\game-assets\\tower-defense-top-down\\Preview.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ObjectiveTile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ObjectiveTile.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -215,7 +233,7 @@
           "width": 0,
           "x": 357,
           "y": 279,
-          "zOrder": 2,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -312,6 +330,22 @@
           "x": 27,
           "y": 88,
           "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Objective1",
+          "persistentUuid": "b600c573-d5d6-4f5c-921b-f8c12bbff067",
+          "width": 0,
+          "x": 537,
+          "y": 288,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -734,6 +768,46 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "Objective1",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ObjectiveTile.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
