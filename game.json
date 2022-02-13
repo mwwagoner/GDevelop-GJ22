@@ -202,7 +202,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5499999999999995,
+        "zoomFactor": 0.9999999999999994,
         "windowMask": false
       },
       "objectsGroups": [
@@ -456,8 +456,8 @@
           "name": "TankBarrel",
           "persistentUuid": "2e57a0f0-42eb-43e9-9543-ade2ff1912c3",
           "width": 0,
-          "x": 645,
-          "y": 920,
+          "x": 356,
+          "y": 277.5,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -1364,7 +1364,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1466,6 +1466,17 @@
                       },
                       "parameters": [
                         "Tank",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "TankBarrel",
                         ""
                       ],
                       "subInstructions": []
@@ -2250,6 +2261,17 @@
               },
               "parameters": [
                 "Tank",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "TankBarrel",
                 ""
               ],
               "subInstructions": []
