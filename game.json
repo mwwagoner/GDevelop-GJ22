@@ -153,6 +153,24 @@
         "name": "ObjectiveTile.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "barrelGreen2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "barrelGreen2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "barrelGreen2-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "barrelGreen2-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -428,6 +446,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "TankBarrel",
+          "persistentUuid": "2e57a0f0-42eb-43e9-9543-ade2ff1912c3",
+          "width": 0,
+          "x": 645,
+          "y": 920,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -450,12 +484,6 @@
           "variables": [],
           "effects": [],
           "behaviors": [
-            {
-              "name": "FireBullet",
-              "type": "FireBullet::FireBullet",
-              "FireCooldown": 0.1,
-              "HasJustFired": false
-            },
             {
               "name": "Health",
               "type": "Health::Health",
@@ -943,6 +971,59 @@
             "align": "left",
             "wordWrap": true
           }
+        },
+        {
+          "name": "TankBarrel",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.1,
+              "HasJustFired": false
+            }
+          ],
+          "animations": [
+            {
+              "name": "barrelGreen2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "barrelGreen2-1.png",
+                      "points": [
+                        {
+                          "name": "ShellPoint",
+                          "x": 43,
+                          "y": 8.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 8.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 7.5
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -1217,7 +1298,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Fire",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1246,10 +1327,10 @@
                         "value": "FireBullet::FireBullet::FireTowardPosition"
                       },
                       "parameters": [
-                        "Tank",
+                        "TankBarrel",
                         "FireBullet",
-                        "Tank.X()",
-                        "Tank.Y()",
+                        "TankBarrel.X(\"ShellPoint\")",
+                        "TankBarrel.Y(\"ShellPoint\")",
                         "Bullet",
                         "MouseX()",
                         "MouseY()",
@@ -1264,7 +1345,7 @@
                         "value": "FireBullet::FireBullet::SetCooldown"
                       },
                       "parameters": [
-                        "Tank",
+                        "TankBarrel",
                         "FireBullet",
                         ".5",
                         ""
@@ -1283,7 +1364,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2202,6 +2283,43 @@
               },
               "parameters": [
                 "MissionSuccess",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "TankBarrel",
+                "=",
+                "Tank.X()",
+                "=",
+                "Tank.Y()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "TankBarrel",
+                "MouseX()",
+                "MouseY()",
+                "0",
                 ""
               ],
               "subInstructions": []
