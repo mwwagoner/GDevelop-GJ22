@@ -157,7 +157,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.8250000000000001,
+        "zoomFactor": 0.5499999999999995,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -274,11 +274,11 @@
           "angle": 0,
           "customSize": true,
           "height": 29,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "TankHealth",
           "persistentUuid": "332f781f-70ce-4294-afbf-ada82e5c5a82",
-          "width": 61,
+          "width": 20,
           "x": 35,
           "y": 25,
           "zOrder": 8,
@@ -709,6 +709,18 @@
                     "RandomInRange(1,4)"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TiledSpriteObject::Width"
+                  },
+                  "parameters": [
+                    "TankHealth",
+                    "=",
+                    "Tank.Health::Health()*20"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -722,7 +734,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -954,6 +966,43 @@
                     {
                       "type": {
                         "inverted": false,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "Enemy1",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::Hit"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "Health",
+                        "1",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
                         "value": "Health::Health::IsJustDamaged"
                       },
                       "parameters": [
@@ -974,6 +1023,39 @@
                         "TankHealth",
                         "=",
                         "Tank.Health::Health()*20"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Health::Health::IsDead"
+                      },
+                      "parameters": [
+                        "Tank",
+                        "Health",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Tank",
+                        ""
                       ],
                       "subInstructions": []
                     }
@@ -1041,6 +1123,41 @@
                     "Enemy1",
                     "Pathfinding",
                     "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "Tank",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    ""
                   ],
                   "subInstructions": []
                 }
@@ -1454,6 +1571,17 @@
               "width": 0
             }
           ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 167798900,
+          "ambientLightColorG": 6031344,
+          "ambientLightColorR": 8128976,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "UI",
+          "visibility": true,
+          "cameras": [],
           "effects": []
         }
       ],
