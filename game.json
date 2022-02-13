@@ -187,7 +187,33 @@
         "zoomFactor": 0.5499999999999995,
         "windowMask": false
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "Enemies",
+          "objects": [
+            {
+              "name": "Enemy1"
+            }
+          ]
+        },
+        {
+          "name": "Spawners",
+          "objects": [
+            {
+              "name": "Enemy1Spawn1"
+            },
+            {
+              "name": "Enemy1Spawn2"
+            },
+            {
+              "name": "Enemy1Spawn3"
+            },
+            {
+              "name": "Enemy1Spawn4"
+            }
+          ]
+        }
+      ],
       "variables": [
         {
           "name": "nextEnemy1Spawn",
@@ -367,6 +393,38 @@
           "x": 580,
           "y": 457,
           "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 146,
+          "layer": "UI",
+          "locked": false,
+          "name": "GameOver",
+          "persistentUuid": "5fd7abcf-aa9f-4a9a-9b7b-e6681b0fa133",
+          "width": 635,
+          "x": 277,
+          "y": 255,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 127,
+          "layer": "",
+          "locked": false,
+          "name": "MissionSuccess",
+          "persistentUuid": "56a642cd-10c3-4bad-9ab3-24ab4cab996f",
+          "width": 1007,
+          "x": 180,
+          "y": 260,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -849,6 +907,42 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "MissionSuccess",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "[outline=green]Mission Success![/shadow] ",
+            "opacity": 255,
+            "fontSize": 120,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "GameOver",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "[shadow=red]Game Over[/shadow] ",
+            "opacity": 255,
+            "fontSize": 120,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
         }
       ],
       "events": [
@@ -937,6 +1031,26 @@
                     "Tank.Health::Health()*20"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "GameOver"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "MissionSuccess"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -950,7 +1064,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1169,7 +1283,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1271,6 +1385,39 @@
                       },
                       "parameters": [
                         "Tank",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Enemies",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Spawners",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "GameOver",
                         ""
                       ],
                       "subInstructions": []
@@ -1955,7 +2102,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1995,6 +2142,72 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "objective1ScrapCount",
+                "=",
+                "5"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "Tank",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "Enemies",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "Spawners",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "MissionSuccess",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
