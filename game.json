@@ -387,6 +387,7 @@
           "effects": [],
           "behaviors": [
             {
+              "maxSpeed": 200,
               "name": "Pathfinding",
               "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 400,
@@ -398,7 +399,6 @@
               "extraBorder": 0,
               "gridOffsetX": 0,
               "gridOffsetY": 0,
-              "maxSpeed": 100,
               "rotateObject": true
             }
           ],
