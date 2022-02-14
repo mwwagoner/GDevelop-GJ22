@@ -178,7 +178,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage0-1.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -187,7 +187,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage0-2.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -196,7 +196,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage0-3.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -205,7 +205,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage0-4.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -214,7 +214,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage0-12.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -223,7 +223,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage0-22.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -232,7 +232,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage0-32.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -241,7 +241,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage0-42.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -250,7 +250,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage1-1.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -259,7 +259,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage1-2.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -268,7 +268,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage1-3.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -277,7 +277,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage1-4.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -286,7 +286,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage1-5.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -295,7 +295,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage1-6.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -304,7 +304,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage2-1.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -313,7 +313,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage2-2.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -322,7 +322,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage2-3.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -331,7 +331,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage2-4.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -340,7 +340,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage2-5.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -349,7 +349,7 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage2-6.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -358,7 +358,16 @@
         "kind": "image",
         "metadata": "",
         "name": "power-coupler-stage3x.png",
-        "smoothed": true,
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "towerDefense_tile278.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "towerDefense_tile278.png",
+        "smoothed": false,
         "userAdded": true
       }
     ],
@@ -391,7 +400,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6499999999999987,
+        "zoomFactor": 0.8249999999999982,
         "windowMask": false
       },
       "objectsGroups": [
@@ -648,6 +657,22 @@
           "x": 356,
           "y": 277.5,
           "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Enemy2Spawn1",
+          "persistentUuid": "093e24a3-c82a-43c3-8d94-57f257a6862c",
+          "width": 0,
+          "x": 596,
+          "y": -108,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -934,6 +959,46 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "numeral1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Enemy2Spawn1",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "towerDefense_tile278.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
