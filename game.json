@@ -369,6 +369,15 @@
         "name": "towerDefense_tile278.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "towerDefense_tile247.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "towerDefense_tile247.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -400,7 +409,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.8249999999999982,
+        "zoomFactor": 1.0850000000000004,
         "windowMask": false
       },
       "objectsGroups": [
@@ -462,8 +471,8 @@
           "name": "Ground",
           "persistentUuid": "fc07f457-daa2-45a7-9321-b20902a58e6f",
           "width": 5219,
-          "x": -2302,
-          "y": -2251,
+          "x": -2303,
+          "y": -2247,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -663,16 +672,32 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 42,
           "layer": "",
           "locked": false,
           "name": "Enemy2Spawn1",
           "persistentUuid": "093e24a3-c82a-43c3-8d94-57f257a6862c",
-          "width": 0,
-          "x": 596,
-          "y": -108,
+          "width": 40,
+          "x": 595,
+          "y": -122,
           "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Enemy2",
+          "persistentUuid": "f2b22c6e-87f1-489d-861f-3c9b033e1a22",
+          "width": 0,
+          "x": 612,
+          "y": 111,
+          "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1578,6 +1603,62 @@
                         "name": "centre",
                         "x": 0,
                         "y": 7.5
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Enemy2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "acceleration": 400,
+              "allowDiagonals": true,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "cellHeight": 20,
+              "cellWidth": 20,
+              "extraBorder": 0,
+              "gridOffsetX": 0,
+              "gridOffsetY": 0,
+              "maxSpeed": 200,
+              "name": "Pathfinding",
+              "rotateObject": true,
+              "type": "PathfindingBehavior::PathfindingBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "towerDefense_tile247.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
                       },
                       "customCollisionMask": []
                     }
@@ -2745,6 +2826,29 @@
                   "subInstructions": []
                 }
               ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Enemy2",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
               "events": []
             }
           ],
