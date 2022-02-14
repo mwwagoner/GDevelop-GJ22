@@ -378,6 +378,33 @@
         "name": "towerDefense_tile247.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "binary ocean.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "binary ocean.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Intergalactic Odyssey.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Intergalactic Odyssey.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "../game-assets/Music/Patrick De Arteaga/Intergalactic Odyssey.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "..\\game-assets\\Music\\Patrick De Arteaga\\Intergalactic Odyssey.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1621,6 +1648,8 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Pathfinding",
+              "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 400,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -1631,9 +1660,7 @@
               "gridOffsetX": 0,
               "gridOffsetY": 0,
               "maxSpeed": 200,
-              "name": "Pathfinding",
-              "rotateObject": true,
-              "type": "PathfindingBehavior::PathfindingBehavior"
+              "rotateObject": true
             }
           ],
           "animations": [
@@ -4437,7 +4464,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Beginning of Scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4534,6 +4561,20 @@
                   },
                   "parameters": [
                     "MissionSuccess"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Intergalactic Odyssey.ogg",
+                    "yes",
+                    "25",
+                    ""
                   ],
                   "subInstructions": []
                 }
@@ -5952,6 +5993,29 @@
               "subInstructions": []
             }
           ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Music",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
           "events": []
         }
       ],
