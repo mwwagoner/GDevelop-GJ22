@@ -1072,7 +1072,7 @@
           ]
         },
         {
-          "name": "Enemy3",
+          "name": "Enemy3a",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -2982,7 +2982,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3986,7 +3986,7 @@
                     "value": "AddForceXY"
                   },
                   "parameters": [
-                    "Enemy3",
+                    "Enemy3a",
                     "-100",
                     "0",
                     ""
@@ -4007,7 +4007,7 @@
                     "value": "Health::Health::IsDead"
                   },
                   "parameters": [
-                    "Enemy3",
+                    "Enemy3a",
                     "Health",
                     ""
                   ],
@@ -4021,7 +4021,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "Enemy3",
+                    "Enemy3a",
                     ""
                   ],
                   "subInstructions": []
@@ -4040,7 +4040,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "Enemy3",
+                    "Enemy3a",
                     "Bullet",
                     "",
                     "",
@@ -4067,7 +4067,7 @@
                     "value": "Health::Health::Hit"
                   },
                   "parameters": [
-                    "Enemy3",
+                    "Enemy3a",
                     "Health",
                     "1",
                     ""
@@ -4082,8 +4082,8 @@
                   "parameters": [
                     "",
                     "Scrap",
-                    "Enemy3.X()",
-                    "Enemy3.Y()",
+                    "Enemy3a.X()",
+                    "Enemy3a.Y()",
                     ""
                   ],
                   "subInstructions": []
@@ -4103,7 +4103,7 @@
                     "value": "FireBullet::FireBullet::SetCooldown"
                   },
                   "parameters": [
-                    "Enemy3",
+                    "Enemy3a",
                     "FireBullet",
                     "1",
                     ""
@@ -4116,10 +4116,10 @@
                     "value": "FireBullet::FireBullet::FireTowardPosition"
                   },
                   "parameters": [
-                    "Enemy3",
+                    "Enemy3a",
                     "FireBullet",
-                    "Enemy3.X(\"enemy3BulletOrigin\")",
-                    "Enemy3.Y(\"enemy3BulletOrigin\")",
+                    "Enemy3a.X(\"enemy3BulletOrigin\")",
+                    "Enemy3a.Y(\"enemy3BulletOrigin\")",
                     "E3Laser",
                     "Tank.X()",
                     "Tank.Y()",
@@ -4181,7 +4181,7 @@
                   },
                   "parameters": [
                     "",
-                    "Enemy3",
+                    "Enemy3a",
                     "Enemy3Spawn1.X()",
                     "Enemy3Spawn1.Y()",
                     ""
