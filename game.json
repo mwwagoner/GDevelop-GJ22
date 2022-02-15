@@ -445,6 +445,9 @@
           "objects": [
             {
               "name": "Enemy1"
+            },
+            {
+              "name": "Enemy2"
             }
           ]
         },
@@ -462,6 +465,18 @@
             },
             {
               "name": "Enemy1Spawn4"
+            },
+            {
+              "name": "Enemy2Spawn1"
+            },
+            {
+              "name": "Enemy2Spawn2"
+            },
+            {
+              "name": "Enemy2Spawn3"
+            },
+            {
+              "name": "Enemy2Spawn4"
             }
           ]
         }
@@ -922,6 +937,7 @@
           "effects": [],
           "behaviors": [
             {
+              "maxSpeed": 100,
               "name": "Pathfinding",
               "type": "PathfindingBehavior::PathfindingBehavior",
               "acceleration": 400,
@@ -933,7 +949,6 @@
               "extraBorder": 0,
               "gridOffsetX": 0,
               "gridOffsetY": 0,
-              "maxSpeed": 200,
               "rotateObject": true
             }
           ],
@@ -1938,7 +1953,31 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
+                    "nextEnemy2Spawn",
+                    "=",
+                    "RandomInRange(1,3)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
                     "nextEnemy1SpawnLoc",
+                    "=",
+                    "RandomInRange(1,4)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2SpawnLoc",
                     "=",
                     "RandomInRange(1,4)"
                   ],
@@ -2002,7 +2041,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2335,6 +2374,52 @@
                       "parameters": [
                         "TankBarrel",
                         ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Enemy1Spawn\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Enemy2Spawn\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "nextEnemy1Spawn",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "nextEnemy2Spawn",
+                        "=",
+                        "0"
                       ],
                       "subInstructions": []
                     },
@@ -3073,6 +3158,134 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PathfindingBehavior::SetDestination"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "Pathfinding",
+                    "",
+                    "Objective1.X()",
+                    "Objective1.Y()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PathfindingBehavior::AllowDiagonals"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "Pathfinding",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "Objective1",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "objective1ScrapCount",
+                    "-",
+                    "5"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "Bullet",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
@@ -3083,7 +3296,7 @@
                     "",
                     "\"Enemy2Spawn\"",
                     ">",
-                    "Variable(nextEnemy1Spawn)"
+                    "Variable(nextEnemy2Spawn)"
                   ],
                   "subInstructions": []
                 },
@@ -3093,7 +3306,7 @@
                     "value": "VarScene"
                   },
                   "parameters": [
-                    "nextEnemy1SpawnLoc",
+                    "nextEnemy2SpawnLoc",
                     "=",
                     "1"
                   ],
@@ -3108,7 +3321,7 @@
                   },
                   "parameters": [
                     "",
-                    "\"Enemy1Spawn\""
+                    "\"Enemy2Spawn\""
                   ],
                   "subInstructions": []
                 },
@@ -3119,9 +3332,9 @@
                   },
                   "parameters": [
                     "",
-                    "Enemy1",
-                    "Enemy1Spawn1.X()",
-                    "Enemy1Spawn1.Y()",
+                    "Enemy2",
+                    "Enemy2Spawn1.X()",
+                    "Enemy2Spawn1.Y()",
                     ""
                   ],
                   "subInstructions": []
@@ -3132,7 +3345,7 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "nextEnemy1Spawn",
+                    "nextEnemy2Spawn",
                     "=",
                     "RandomInRange(1,3)"
                   ],
@@ -3144,7 +3357,259 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "nextEnemy1SpawnLoc",
+                    "nextEnemy2SpawnLoc",
+                    "=",
+                    "RandomInRange(1,4)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Enemy2Spawn\"",
+                    ">",
+                    "Variable(nextEnemy2Spawn)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2SpawnLoc",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Enemy2Spawn\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Enemy2",
+                    "Enemy2Spawn2.X()",
+                    "Enemy2Spawn2.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2Spawn",
+                    "=",
+                    "RandomInRange(1,3)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2SpawnLoc",
+                    "=",
+                    "RandomInRange(1,4)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Enemy2Spawn\"",
+                    ">",
+                    "Variable(nextEnemy2Spawn)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2SpawnLoc",
+                    "=",
+                    "3"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Enemy2Spawn\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Enemy2",
+                    "Enemy2Spawn3.X()",
+                    "Enemy2Spawn3.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2Spawn",
+                    "=",
+                    "RandomInRange(1,3)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2SpawnLoc",
+                    "=",
+                    "RandomInRange(1,4)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Enemy2Spawn\"",
+                    ">",
+                    "Variable(nextEnemy2Spawn)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2SpawnLoc",
+                    "=",
+                    "4"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Enemy2Spawn\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Enemy2",
+                    "Enemy2Spawn4.X()",
+                    "Enemy2Spawn4.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2Spawn",
+                    "=",
+                    "RandomInRange(1,3)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy2SpawnLoc",
                     "=",
                     "RandomInRange(1,4)"
                   ],
@@ -3289,6 +3754,52 @@
               "parameters": [
                 "MissionSuccess",
                 ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PauseTimer"
+              },
+              "parameters": [
+                "",
+                "\"Enemy1Spawn\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PauseTimer"
+              },
+              "parameters": [
+                "",
+                "\"Enemy2Spawn\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "nextEnemy1Spawn",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "nextEnemy2Spawn",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
@@ -3512,6 +4023,55 @@
               "parameters": [
                 "Objective1",
                 "\"Stage3\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Reset negative scrap count",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "objective1ScrapCount",
+                "<",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "objective1ScrapCount",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
