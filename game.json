@@ -1069,6 +1069,12 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.1,
+              "HasJustFired": false
+            },
+            {
               "name": "Health",
               "type": "Health::Health",
               "Health": 3,
@@ -1102,11 +1108,17 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "enemyGreen5.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "enemy3BulletOrigin",
+                          "x": 48.300018310546875,
+                          "y": 83
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 48.300018310546875,
+                        "y": 41.399993896484375
                       },
                       "centerPoint": {
                         "automatic": true,
