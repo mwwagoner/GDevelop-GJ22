@@ -441,6 +441,15 @@
         "name": "laserRed01-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "enemyGreen5-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "enemyGreen5-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1116,16 +1125,16 @@
           ],
           "animations": [
             {
-              "name": "",
+              "name": "enemyGreen5",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "enemyGreen5.png",
+                      "image": "enemyGreen5-1.png",
                       "points": [
                         {
                           "name": "enemy3BulletOrigin",
@@ -4066,6 +4075,46 @@
                     "Scrap",
                     "Enemy3.X()",
                     "Enemy3.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FireBullet::FireBullet::SetCooldown"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "FireBullet",
+                    "1",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FireBullet::FireBullet::FireTowardPosition"
+                  },
+                  "parameters": [
+                    "Enemy3",
+                    "FireBullet",
+                    "Enemy3.X(\"enemy3BulletOrigin\")",
+                    "Enemy3.Y(\"enemy3BulletOrigin\")",
+                    "E3Laser",
+                    "Tank.X()",
+                    "Tank.Y()",
+                    "200",
                     ""
                   ],
                   "subInstructions": []
