@@ -1069,6 +1069,15 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Health",
+              "type": "Health::Health",
+              "Health": 3,
+              "DamageCooldown": 0,
+              "MaxHealth": 3,
+              "IsJustDamaged": false,
+              "CooldownActive": false
+            },
+            {
               "name": "SineMovement",
               "type": "SineMovement::SineMovement",
               "HorizontalSpeed": 0,
@@ -3900,20 +3909,18 @@
               "events": []
             },
             {
-              "disabled": true,
+              "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "CollisionNP"
+                    "value": "Health::Health::IsDead"
                   },
                   "parameters": [
-                    "Enemy2",
-                    "Objective1",
-                    "",
-                    "",
+                    "Enemy3",
+                    "Health",
                     ""
                   ],
                   "subInstructions": []
@@ -3923,22 +3930,10 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "objective1ScrapCount",
-                    "-",
-                    "5"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "Delete"
                   },
                   "parameters": [
-                    "Enemy2",
+                    "Enemy3",
                     ""
                   ],
                   "subInstructions": []
@@ -3947,7 +3942,7 @@
               "events": []
             },
             {
-              "disabled": true,
+              "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -3957,7 +3952,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "Enemy2",
+                    "Enemy3",
                     "Bullet",
                     "",
                     "",
@@ -3973,7 +3968,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "Enemy2",
+                    "Bullet",
                     ""
                   ],
                   "subInstructions": []
@@ -3981,10 +3976,26 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Delete"
+                    "value": "Health::Health::Hit"
                   },
                   "parameters": [
-                    "Bullet",
+                    "Enemy3",
+                    "Health",
+                    "1",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Scrap",
+                    "Enemy3.X()",
+                    "Enemy3.Y()",
                     ""
                   ],
                   "subInstructions": []
