@@ -459,6 +459,15 @@
         "name": "enemyGreen5-1-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "laserRed01-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "laserRed01-1-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2197,7 +2206,47 @@
           ]
         },
         {
-          "name": "E3Laser",
+          "name": "E3Laserab",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "laserRed01",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "laserRed01-1-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "E3Lasera",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -2244,7 +2293,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Beginning of Scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2367,6 +2416,18 @@
                     "nextEnemy2SpawnLoc",
                     "=",
                     "RandomInRange(1,4)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy3SpawnLoc",
+                    "=",
+                    "RandomInRange(1,2)"
                   ],
                   "subInstructions": []
                 },
@@ -2701,7 +2762,7 @@
                       },
                       "parameters": [
                         "Tank",
-                        "E3Laser",
+                        "E3Lasera",
                         "",
                         "",
                         ""
@@ -2729,7 +2790,7 @@
                         "value": "Delete"
                       },
                       "parameters": [
-                        "E3Laser",
+                        "E3Lasera",
                         ""
                       ],
                       "subInstructions": []
@@ -4094,6 +4155,28 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "Enemy3b",
+                    "100",
+                    "0",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
@@ -4116,6 +4199,39 @@
                   },
                   "parameters": [
                     "Enemy3a",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::IsDead"
+                  },
+                  "parameters": [
+                    "Enemy3b",
+                    "Health",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy3b",
                     ""
                   ],
                   "subInstructions": []
@@ -4189,6 +4305,68 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy3b",
+                    "Bullet",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "Enemy3b",
+                    "Health",
+                    "1",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Scrap",
+                    "Enemy3b.X()",
+                    "Enemy3b.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
@@ -4214,7 +4392,47 @@
                     "FireBullet",
                     "Enemy3a.X(\"enemy3BulletOrigin\")",
                     "Enemy3a.Y(\"enemy3BulletOrigin\")",
-                    "E3Laser",
+                    "E3Lasera",
+                    "Tank.X()",
+                    "Tank.Y()",
+                    "250",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FireBullet::FireBullet::SetCooldown"
+                  },
+                  "parameters": [
+                    "Enemy3b",
+                    "FireBullet",
+                    "1",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FireBullet::FireBullet::FireTowardPosition"
+                  },
+                  "parameters": [
+                    "Enemy3b",
+                    "FireBullet",
+                    "Enemy3b.X(\"enemy3BulletOrigin\")",
+                    "Enemy3b.Y(\"enemy3BulletOrigin\")",
+                    "E3Laserab",
                     "Tank.X()",
                     "Tank.Y()",
                     "250",
@@ -4291,6 +4509,102 @@
                     "nextEnemy3Spawn",
                     "=",
                     "RandomInRange(5,8)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy3SpawnLoc",
+                    "=",
+                    "RandomInRange(1,2)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Enemy3Spawn\"",
+                    ">",
+                    "Variable(nextEnemy3Spawn)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy3SpawnLoc",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Enemy3Spawn\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Enemy3b",
+                    "Enemy3Spawn2.X()",
+                    "Enemy3Spawn2.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy3Spawn",
+                    "=",
+                    "RandomInRange(5,8)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "nextEnemy3SpawnLoc",
+                    "=",
+                    "RandomInRange(1,2)"
                   ],
                   "subInstructions": []
                 }
