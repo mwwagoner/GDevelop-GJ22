@@ -872,22 +872,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Enemy3",
-          "persistentUuid": "dd873036-472a-49ab-b706-cf8c2858a2c0",
-          "width": 0,
-          "x": 1321,
-          "y": 105,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -2177,7 +2161,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Beginning of Scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2298,18 +2282,6 @@
                   },
                   "parameters": [
                     "nextEnemy2SpawnLoc",
-                    "=",
-                    "RandomInRange(1,4)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "nextEnemy3SpawnLoc",
                     "=",
                     "RandomInRange(1,4)"
                   ],
@@ -4114,7 +4086,7 @@
                     "E3Laser",
                     "Tank.X()",
                     "Tank.Y()",
-                    "200",
+                    "250",
                     ""
                   ],
                   "subInstructions": []
@@ -4123,7 +4095,7 @@
               "events": []
             },
             {
-              "disabled": true,
+              "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -4134,9 +4106,9 @@
                   },
                   "parameters": [
                     "",
-                    "\"Enemy2Spawn\"",
+                    "\"Enemy3Spawn\"",
                     ">",
-                    "Variable(nextEnemy2Spawn)"
+                    "Variable(nextEnemy3Spawn)"
                   ],
                   "subInstructions": []
                 },
@@ -4146,7 +4118,7 @@
                     "value": "VarScene"
                   },
                   "parameters": [
-                    "nextEnemy2SpawnLoc",
+                    "nextEnemy3SpawnLoc",
                     "=",
                     "1"
                   ],
@@ -4161,7 +4133,7 @@
                   },
                   "parameters": [
                     "",
-                    "\"Enemy2Spawn\""
+                    "\"Enemy3Spawn\""
                   ],
                   "subInstructions": []
                 },
@@ -4172,9 +4144,9 @@
                   },
                   "parameters": [
                     "",
-                    "Enemy2",
-                    "Enemy2Spawn1.X()",
-                    "Enemy2Spawn1.Y()",
+                    "Enemy3",
+                    "Enemy3Spawn1.X()",
+                    "Enemy3Spawn1.Y()",
                     ""
                   ],
                   "subInstructions": []
@@ -4185,25 +4157,21 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "nextEnemy2Spawn",
+                    "nextEnemy3Spawn",
                     "=",
-                    "RandomInRange(1,3)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "nextEnemy2SpawnLoc",
-                    "=",
-                    "RandomInRange(1,4)"
+                    "RandomInRange(5,8)"
                   ],
                   "subInstructions": []
                 }
               ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
               "events": []
             }
           ],
