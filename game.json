@@ -450,6 +450,15 @@
         "name": "enemyGreen5-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "enemyGreen5-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "enemyGreen5-1-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1130,6 +1139,80 @@
                         "name": "origine",
                         "x": 48.300018310546875,
                         "y": 41.399993896484375
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Enemy3b",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.1,
+              "HasJustFired": false
+            },
+            {
+              "name": "Health",
+              "type": "Health::Health",
+              "Health": 3,
+              "DamageCooldown": 0,
+              "MaxHealth": 3,
+              "IsJustDamaged": false,
+              "CooldownActive": false
+            },
+            {
+              "name": "SineMovement",
+              "type": "SineMovement::SineMovement",
+              "HorizontalSpeed": 0,
+              "VerticalSpeed": 120,
+              "HorizontalDistance": 0,
+              "VerticalDistance": 100,
+              "CenterPointX": 0,
+              "CenterPointY": 0,
+              "SineProgressX": 0,
+              "SineProgressY": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "enemyGreen5",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "enemyGreen5-1-1.png",
+                      "points": [
+                        {
+                          "name": "enemy3BulletOrigin",
+                          "x": 81,
+                          "y": 47.899993896484375
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 41.800018310546875,
+                        "y": 48.70001220703125
                       },
                       "centerPoint": {
                         "automatic": true,
