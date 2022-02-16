@@ -9743,22 +9743,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Bonus",
-          "persistentUuid": "6581f29d-9e84-4c3f-934d-e43849b98338",
-          "width": 0,
-          "x": 768,
-          "y": 47,
-          "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -10749,26 +10733,6 @@
               ]
             }
           ]
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "Bonus",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Placeholder",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
         }
       ],
       "events": [
@@ -12019,7 +11983,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
