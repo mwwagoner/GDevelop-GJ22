@@ -5646,6 +5646,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "NextLevel",
+          "persistentUuid": "db4a5a65-8c6e-474f-8107-3c0fc115c6ae",
+          "width": 0,
+          "x": 505,
+          "y": 407,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -6732,6 +6748,46 @@
               ]
             }
           ]
+        },
+        {
+          "name": "NextLevel",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Next-level-button-200px.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -6873,6 +6929,16 @@
                   },
                   "parameters": [
                     "MissionSuccess"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "NextLevel"
                   ],
                   "subInstructions": []
                 },
@@ -8621,6 +8687,17 @@
             {
               "type": {
                 "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "NextLevel",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "PauseTimer"
               },
               "parameters": [
@@ -8661,6 +8738,62 @@
                 "nextEnemy2Spawn",
                 "=",
                 "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "NextLevel",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Visible"
+              },
+              "parameters": [
+                "NextLevel"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Level3\"",
+                ""
               ],
               "subInstructions": []
             }
@@ -10216,7 +10349,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Beginning of Scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10313,6 +10446,16 @@
                   },
                   "parameters": [
                     "MissionSuccess"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "NextLevel"
                   ],
                   "subInstructions": []
                 },
@@ -11479,6 +11622,29 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "NextLevel",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Visible"
+                  },
+                  "parameters": [
+                    "NextLevel"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
@@ -11585,6 +11751,17 @@
               },
               "parameters": [
                 "MissionSuccess",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "NextLevel",
                 ""
               ],
               "subInstructions": []
