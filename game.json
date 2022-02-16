@@ -477,6 +477,15 @@
         "name": "Next-Level-button.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Next-level-button-200px.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Next-level-button-200px.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -10178,7 +10187,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Next-Level-button.png",
+                      "image": "Next-level-button-200px.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
