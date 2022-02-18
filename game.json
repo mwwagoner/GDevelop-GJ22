@@ -545,7 +545,33 @@
     "resourceFolders": []
   },
   "objects": [],
-  "objectsGroups": [],
+  "objectsGroups": [
+    {
+      "name": "Enemies",
+      "objects": [
+        {
+          "name": "Enemy1"
+        }
+      ]
+    },
+    {
+      "name": "Spawners",
+      "objects": [
+        {
+          "name": "Enemy1Spawn1"
+        },
+        {
+          "name": "Enemy1Spawn2"
+        },
+        {
+          "name": "Enemy1Spawn3"
+        },
+        {
+          "name": "Enemy1Spawn4"
+        }
+      ]
+    }
+  ],
   "variables": [
     {
       "name": "LIFE_INCREASE",
@@ -554,6 +580,11 @@
     },
     {
       "name": "BULLET_UPGRADE",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "WEST_TURRET_BUILT",
       "type": "boolean",
       "value": false
     }
@@ -582,36 +613,10 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7249999999999988,
+        "zoomFactor": 0.8249999999999988,
         "windowMask": false
       },
-      "objectsGroups": [
-        {
-          "name": "Enemies",
-          "objects": [
-            {
-              "name": "Enemy1"
-            }
-          ]
-        },
-        {
-          "name": "Spawners",
-          "objects": [
-            {
-              "name": "Enemy1Spawn1"
-            },
-            {
-              "name": "Enemy1Spawn2"
-            },
-            {
-              "name": "Enemy1Spawn3"
-            },
-            {
-              "name": "Enemy1Spawn4"
-            }
-          ]
-        }
-      ],
+      "objectsGroups": [],
       "variables": [
         {
           "name": "nextEnemy1Spawn",
@@ -637,11 +642,6 @@
           "name": "westTurretScrapCount",
           "type": "string",
           "value": "0"
-        },
-        {
-          "name": "westTurretBuilt",
-          "type": "boolean",
-          "value": false
         }
       ],
       "instances": [
@@ -2002,7 +2002,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Beginning of Scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2638,7 +2638,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "BulletTurret",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2679,7 +2679,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Build",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2882,10 +2882,10 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "SceneVariableAsBoolean"
+                    "value": "GlobalVariableAsBoolean"
                   },
                   "parameters": [
-                    "westTurretBuilt",
+                    "WEST_TURRET_BUILT",
                     "False"
                   ],
                   "subInstructions": []
@@ -2907,10 +2907,10 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "SetSceneVariableAsBoolean"
+                    "value": "SetGlobalVariableAsBoolean"
                   },
                   "parameters": [
-                    "westTurretBuilt",
+                    "WEST_TURRET_BUILT",
                     "True"
                   ],
                   "subInstructions": []
@@ -4437,10 +4437,10 @@
           "name": "Enemies",
           "objects": [
             {
-              "name": "Enemy1"
+              "name": "Enemy2"
             },
             {
-              "name": "Enemy2"
+              "name": "Enemy1"
             }
           ]
         },
@@ -4504,6 +4504,16 @@
           "name": "nextEnemy2SpawnLoc",
           "type": "string",
           "value": "1"
+        },
+        {
+          "name": "westTurretScrapCount",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "westTurretBuilt",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -4516,8 +4526,8 @@
           "name": "Ground",
           "persistentUuid": "fc07f457-daa2-45a7-9321-b20902a58e6f",
           "width": 5219,
-          "x": -2303,
-          "y": -2247,
+          "x": -2304,
+          "y": -2246,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4807,6 +4817,22 @@
           "x": 647,
           "y": 425,
           "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "TurretTileWest",
+          "persistentUuid": "3eb27d61-3332-4bd2-b0d5-6d7dd6ea58b4",
+          "width": 0,
+          "x": 367,
+          "y": 358,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6016,6 +6042,93 @@
               ]
             }
           ]
+        },
+        {
+          "name": "TurretTileWest",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "towerDefense_tile202.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32.15135192871094,
+                        "y": 32.02162170410156
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BulletTurret",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 2,
+              "HasJustFired": false
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "towerDefense_tile203.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 31,
+                        "y": 33
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -6077,6 +6190,17 @@
                   "parameters": [
                     "",
                     "\"objective1Build\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"westTurretBuild\""
                   ],
                   "subInstructions": []
                 },
@@ -6176,7 +6300,7 @@
                   "parameters": [
                     "",
                     "binary ocean.ogg",
-                    "",
+                    "yes",
                     "20",
                     ""
                   ],
@@ -6298,6 +6422,51 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "WEST_TURRET_BUILT",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletTurret",
+                    "TurretTileWest.PointX(\"Origin\")",
+                    "TurretTileWest.PointY(\"Origin\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -6308,7 +6477,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6461,7 +6630,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Fire",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6885,6 +7054,47 @@
           "creationTime": 0,
           "disabled": false,
           "folded": true,
+          "name": "BulletTurret",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FireBullet::FireBullet::FireTowardPosition"
+                  },
+                  "parameters": [
+                    "BulletTurret",
+                    "FireBullet",
+                    "BulletTurret.PointX(\"Origin\")",
+                    "BulletTurret.PointY(\"Origin\")",
+                    "Bullet",
+                    "Enemies.X()",
+                    "Enemies.Y()",
+                    "900",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
           "name": "Build",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6983,6 +7193,159 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Tank",
+                    "TurretTileWest",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "e"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"westTurretBuild\"",
+                    ">",
+                    ".5"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "scrapCount",
+                    "<=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "scrapCount",
+                    "-",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"westTurretBuild\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "westTurretScrapCount",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "westTurretBuilt",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "westTurretScrapCount",
+                    ">=",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "westTurretBuilt",
+                    "True"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletTurret",
+                    "TurretTileWest.PointX(\"Origin\")",
+                    "TurretTileWest.PointY(\"Origin\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -6993,7 +7356,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8753,6 +9116,12 @@
             },
             {
               "name": "Enemy2"
+            },
+            {
+              "name": "Enemy3a"
+            },
+            {
+              "name": "Enemy3b"
             }
           ]
         },
@@ -8826,6 +9195,16 @@
           "name": "nextEnemy3SpawnLoc",
           "type": "string",
           "value": "1"
+        },
+        {
+          "name": "westTurretScrapCount",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "westTurretBuilt",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -8838,8 +9217,8 @@
           "name": "Ground",
           "persistentUuid": "fc07f457-daa2-45a7-9321-b20902a58e6f",
           "width": 5219,
-          "x": -2430,
-          "y": -2207,
+          "x": -2432,
+          "y": -2204,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -9145,6 +9524,22 @@
           "x": 647,
           "y": 425,
           "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "TurretTileWest",
+          "persistentUuid": "7741153d-4113-4c6d-882f-45da96dee65b",
+          "width": 0,
+          "x": 367,
+          "y": 358,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -10622,6 +11017,93 @@
               ]
             }
           ]
+        },
+        {
+          "name": "TurretTileWest",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "towerDefense_tile202.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32.15135192871094,
+                        "y": 32.02162170410156
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BulletTurret",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 2,
+              "HasJustFired": false
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "towerDefense_tile203.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 31,
+                        "y": 33
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -10631,7 +11113,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Beginning of Scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10694,6 +11176,17 @@
                   "parameters": [
                     "",
                     "\"objective1Build\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"westTurretBuild\""
                   ],
                   "subInstructions": []
                 },
@@ -10807,7 +11300,7 @@
                   "parameters": [
                     "",
                     "binary ocean.ogg",
-                    "",
+                    "yes",
                     "20",
                     ""
                   ],
@@ -10924,6 +11417,41 @@
                     "TankHealth",
                     "=",
                     "Tank.Health::Health()*20"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "westTurretBuilt",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletTurret",
+                    "TurretTileWest.PointX(\"Origin\")",
+                    "TurretTileWest.PointY(\"Origin\")",
+                    ""
                   ],
                   "subInstructions": []
                 }
@@ -11611,7 +12139,48 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
+          "name": "BulletTurret",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FireBullet::FireBullet::FireTowardPosition"
+                  },
+                  "parameters": [
+                    "BulletTurret",
+                    "FireBullet",
+                    "BulletTurret.PointX(\"Origin\")",
+                    "BulletTurret.PointY(\"Origin\")",
+                    "Bullet",
+                    "Enemies.X()",
+                    "Enemies.Y()",
+                    "900",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
           "name": "Build",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11705,6 +12274,159 @@
                     "objective1ScrapCount",
                     "+",
                     "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Tank",
+                    "TurretTileWest",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "e"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"westTurretBuild\"",
+                    ">",
+                    ".5"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "scrapCount",
+                    "<=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "scrapCount",
+                    "-",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"westTurretBuild\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "westTurretScrapCount",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "westTurretBuilt",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "westTurretScrapCount",
+                    ">=",
+                    "10"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "westTurretBuilt",
+                    "True"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BulletTurret",
+                    "TurretTileWest.PointX(\"Origin\")",
+                    "TurretTileWest.PointY(\"Origin\")",
+                    ""
                   ],
                   "subInstructions": []
                 }
@@ -13256,7 +13978,7 @@
                   "parameters": [
                     "Enemy3a",
                     "FireBullet",
-                    "1",
+                    "2",
                     ""
                   ],
                   "subInstructions": []
@@ -13271,7 +13993,7 @@
                     "FireBullet",
                     "Enemy3a.X(\"enemy3BulletOrigin\")",
                     "Enemy3a.Y(\"enemy3BulletOrigin\")",
-                    "E3Lasera",
+                    "E3Laserab",
                     "Tank.X()",
                     "Tank.Y()",
                     "250",
@@ -13296,7 +14018,7 @@
                   "parameters": [
                     "Enemy3b",
                     "FireBullet",
-                    "1",
+                    "2",
                     ""
                   ],
                   "subInstructions": []
