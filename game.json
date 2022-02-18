@@ -522,6 +522,24 @@
         "name": "bullet-upgrade-button-export.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "laserBlue06.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "laserBlue06.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "laserBlue06-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "laserBlue06-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -5032,6 +5050,46 @@
           ]
         },
         {
+          "name": "LaserBullet",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "laserBlue06",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "laserBlue06-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 6.362069129943848,
+                        "y": 18.527587890625
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Enemy1Spawn4",
           "tags": "",
           "type": "Sprite",
@@ -6403,7 +6461,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Fire",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6421,6 +6479,17 @@
                       "parameters": [
                         "",
                         "Space"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BULLET_UPGRADE",
+                        ""
                       ],
                       "subInstructions": []
                     }
@@ -6459,6 +6528,69 @@
                     }
                   ],
                   "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Space"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BULLET_UPGRADE",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "TankBarrel",
+                        "FireBullet",
+                        "TankBarrel.X(\"ShellPoint\")",
+                        "TankBarrel.Y(\"ShellPoint\")",
+                        "LaserBullet",
+                        "MouseX()",
+                        "MouseY()",
+                        "700",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FireBullet::FireBullet::SetCooldown"
+                      },
+                      "parameters": [
+                        "TankBarrel",
+                        "FireBullet",
+                        ".5",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ],
               "parameters": []
@@ -6469,7 +6601,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -7031,6 +7163,66 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "LaserBullet",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "LaserBullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Scrap",
+                    "Enemy1.X()",
+                    "Enemy1.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "CompareTimer"
                   },
                   "parameters": [
@@ -7495,6 +7687,52 @@
                   },
                   "parameters": [
                     "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "LaserBullet",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "LaserBullet",
                     ""
                   ],
                   "subInstructions": []
@@ -9298,6 +9536,46 @@
           ]
         },
         {
+          "name": "LaserBullet",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "laserBlue06",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "laserBlue06-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 6.362069129943848,
+                        "y": 18.527587890625
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Enemy1Spawn1",
           "tags": "",
           "type": "Sprite",
@@ -10353,7 +10631,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Beginning of Scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10488,18 +10766,6 @@
                     "nextEnemy3SpawnLoc",
                     "=",
                     "RandomInRange(1,2)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TiledSpriteObject::Width"
-                  },
-                  "parameters": [
-                    "TankHealth",
-                    "=",
-                    "Tank.Health::Health()*20"
                   ],
                   "subInstructions": []
                 },
@@ -10673,7 +10939,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10826,7 +11092,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Fire",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -10844,6 +11110,17 @@
                       "parameters": [
                         "",
                         "Space"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BULLET_UPGRADE",
+                        "False"
                       ],
                       "subInstructions": []
                     }
@@ -10882,6 +11159,69 @@
                     }
                   ],
                   "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Space"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BULLET_UPGRADE",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FireBullet::FireBullet::FireTowardPosition"
+                      },
+                      "parameters": [
+                        "TankBarrel",
+                        "FireBullet",
+                        "TankBarrel.X(\"ShellPoint\")",
+                        "TankBarrel.Y(\"ShellPoint\")",
+                        "LaserBullet",
+                        "MouseX()",
+                        "MouseY()",
+                        "700",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "FireBullet::FireBullet::SetCooldown"
+                      },
+                      "parameters": [
+                        "TankBarrel",
+                        "FireBullet",
+                        ".5",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ],
               "parameters": []
@@ -10892,7 +11232,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -11380,7 +11720,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11521,6 +11861,66 @@
                   },
                   "parameters": [
                     "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Scrap",
+                    "Enemy1.X()",
+                    "Enemy1.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    "LaserBullet",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy1",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "LaserBullet",
                     ""
                   ],
                   "subInstructions": []
@@ -12014,6 +12414,52 @@
                   },
                   "parameters": [
                     "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    "LaserBullet",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "LaserBullet",
                     ""
                   ],
                   "subInstructions": []
@@ -12621,6 +13067,68 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
+                    "Enemy3a",
+                    "LaserBullet",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "LaserBullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "Enemy3a",
+                    "Health",
+                    "2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Scrap",
+                    "Enemy3b.X()",
+                    "Enemy3b.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
                     "Enemy3b",
                     "Bullet",
                     "",
@@ -12651,6 +13159,68 @@
                     "Enemy3b",
                     "Health",
                     "1",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Scrap",
+                    "Enemy3b.X()",
+                    "Enemy3b.Y()",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Enemy3b",
+                    "LaserBullet",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "LaserBullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "Enemy3b",
+                    "Health",
+                    "2",
                     ""
                   ],
                   "subInstructions": []
