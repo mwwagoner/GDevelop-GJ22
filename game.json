@@ -670,6 +670,15 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "userAdded": true
+      },
+      {
+        "file": "impactMetal_003.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "impactMetal_003.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -3342,7 +3351,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3437,6 +3446,20 @@
                         "TankBarrel",
                         "Flash",
                         ".5",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "impactMetal_003.ogg",
+                        "",
+                        "",
                         ""
                       ],
                       "subInstructions": []
@@ -8428,6 +8451,20 @@
                         "TankBarrel",
                         "Flash",
                         ".5",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "impactMetal_003.ogg",
+                        "",
+                        "",
                         ""
                       ],
                       "subInstructions": []
@@ -14366,7 +14403,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -14786,7 +14823,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -14977,6 +15014,20 @@
                         "TankBarrel",
                         "Flash",
                         ".5",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "impactMetal_003.ogg",
+                        "",
+                        "",
                         ""
                       ],
                       "subInstructions": []
@@ -17874,7 +17925,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
