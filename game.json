@@ -558,6 +558,15 @@
         "name": "laserGreen10-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bullet2-upgrade-button-export.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bullet2-upgrade-button-export.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -9160,8 +9169,8 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "BulletUpgradeButton",
-          "persistentUuid": "0f8e2dc8-d251-47dd-9880-7c462f2b2d86",
+          "name": "Bullet2UpgradeButton",
+          "persistentUuid": "1c8d96e2-cdc5-4fd3-8f40-d69b143e2675",
           "width": 0,
           "x": 712,
           "y": 201,
@@ -9253,7 +9262,7 @@
           ]
         },
         {
-          "name": "BulletUpgradeButton",
+          "name": "Bullet2UpgradeButton",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -9271,7 +9280,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "bullet-upgrade-button-export.png",
+                      "image": "bullet2-upgrade-button-export.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9418,7 +9427,7 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
-                "BulletUpgradeButton",
+                "Bullet2UpgradeButton",
                 "",
                 "",
                 ""
@@ -12123,6 +12132,17 @@
                       },
                       "parameters": [
                         "BULLET_UPGRADE",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "BULLET_UPGRADE_2",
                         "False"
                       ],
                       "subInstructions": []
