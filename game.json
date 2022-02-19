@@ -633,6 +633,11 @@
       "name": "BULLET_UPGRADE_2",
       "type": "boolean",
       "value": false
+    },
+    {
+      "name": "EAST_TURRET_BUILT",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
@@ -4419,7 +4424,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.8100000000000005,
+        "zoomFactor": 0.7599999999999998,
         "windowMask": false
       },
       "objectsGroups": [
@@ -4501,9 +4506,9 @@
           "value": "0"
         },
         {
-          "name": "westTurretBuilt",
-          "type": "boolean",
-          "value": false
+          "name": "eastTurretScrapCount",
+          "type": "string",
+          "value": "0"
         }
       ],
       "instances": [
@@ -4821,6 +4826,22 @@
           "persistentUuid": "3eb27d61-3332-4bd2-b0d5-6d7dd6ea58b4",
           "width": 0,
           "x": 367,
+          "y": 358,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "TurretTileEast",
+          "persistentUuid": "8ff745bb-6f1a-4af3-9237-9e629e6d2625",
+          "width": 0,
+          "x": 871,
           "y": 358,
           "zOrder": 2,
           "numberProperties": [],
@@ -6034,7 +6055,7 @@
           ]
         },
         {
-          "name": "TurretTileWest2",
+          "name": "TurretTileEast",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -6231,6 +6252,17 @@
                   "parameters": [
                     "",
                     "\"westTurretBuild\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"eastTurretBuild\""
                   ],
                   "subInstructions": []
                 },
@@ -7327,10 +7359,105 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Tank",
+                    "TurretTileEast",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "e"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"eastTurretBuild\"",
+                    ">",
+                    ".5"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "scrapCount",
+                    "<=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "scrapCount",
+                    "-",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"eastTurretBuild\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "eastTurretScrapCount",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "GlobalVariableAsBoolean"
                   },
                   "parameters": [
-                    "WEST_TURRET_BUILT",
+                    "EAST_TURRET_BUILT",
                     "False"
                   ],
                   "subInstructions": []
@@ -7341,7 +7468,7 @@
                     "value": "VarScene"
                   },
                   "parameters": [
-                    "westTurretScrapCount",
+                    "eastTurretScrapCount",
                     ">=",
                     "10"
                   ],
@@ -7355,7 +7482,7 @@
                     "value": "SetGlobalVariableAsBoolean"
                   },
                   "parameters": [
-                    "WEST_TURRET_BUILT",
+                    "EAST_TURRET_BUILT",
                     "True"
                   ],
                   "subInstructions": []
@@ -7368,8 +7495,8 @@
                   "parameters": [
                     "",
                     "BulletTurret",
-                    "TurretTileWest.PointX(\"Origin\")",
-                    "TurretTileWest.PointY(\"Origin\")",
+                    "TurretTileEast.PointX(\"Origin\")",
+                    "TurretTileEast.PointY(\"Origin\")",
                     ""
                   ],
                   "subInstructions": []
