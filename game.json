@@ -1652,10 +1652,10 @@
             {
               "name": "StayOnScreen",
               "type": "StayOnScreen::StayOnScreen",
-              "MarginTop": 0,
-              "MarginBottom": 0,
-              "MarginLeft": 0,
-              "MarginRight": 0
+              "MarginTop": 30,
+              "MarginBottom": -40,
+              "MarginLeft": 30,
+              "MarginRight": -40
             },
             {
               "name": "TopDownMovement",
@@ -5582,10 +5582,10 @@
             {
               "name": "StayOnScreen",
               "type": "StayOnScreen::StayOnScreen",
-              "MarginTop": 0,
-              "MarginBottom": 0,
-              "MarginLeft": 0,
-              "MarginRight": 0
+              "MarginTop": 30,
+              "MarginBottom": -40,
+              "MarginLeft": 30,
+              "MarginRight": -40
             },
             {
               "name": "TopDownMovement",
@@ -11054,10 +11054,10 @@
             {
               "name": "StayOnScreen",
               "type": "StayOnScreen::StayOnScreen",
-              "MarginTop": 0,
-              "MarginBottom": 0,
-              "MarginLeft": 0,
-              "MarginRight": 0
+              "MarginTop": 30,
+              "MarginBottom": -40,
+              "MarginLeft": 30,
+              "MarginRight": -40
             },
             {
               "name": "TopDownMovement",
