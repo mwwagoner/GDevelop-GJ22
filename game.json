@@ -778,6 +778,24 @@
         "name": "bullet-upgrade-button-pressed.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "magnet-upgrade-button-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "magnet-upgrade-button-pressed.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bullet2-upgrade-button-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bullet2-upgrade-button-pressed.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -11983,7 +12001,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Unpressed",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -11993,6 +12011,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "bullet2-upgrade-button-export.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Pressed",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bullet2-upgrade-button-pressed.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -12023,7 +12070,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Unpressed",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -12033,6 +12080,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "magnet-upgrade-button..png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Pressed",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "magnet-upgrade-button-pressed.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -12221,17 +12297,6 @@
                 ""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "BULLET_UPGRADE_2",
-                ""
-              ],
-              "subInstructions": []
             }
           ],
           "actions": [
@@ -12243,6 +12308,39 @@
               "parameters": [
                 "SCRAP_MAGNET",
                 "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "MagnetBonusButton",
+                "\"Pressed\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "BULLET_UPGRADE_2",
+                "False"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "Bullet2UpgradeButton",
+                "\"Unpressed\""
               ],
               "subInstructions": []
             }
@@ -12277,17 +12375,6 @@
                 ""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "SCRAP_MAGNET",
-                ""
-              ],
-              "subInstructions": []
             }
           ],
           "actions": [
@@ -12299,6 +12386,39 @@
               "parameters": [
                 "BULLET_UPGRADE_2",
                 "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "Bullet2UpgradeButton",
+                "\"Pressed\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "SCRAP_MAGNET",
+                "False"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "MagnetBonusButton",
+                "\"Unpressed\""
               ],
               "subInstructions": []
             }
