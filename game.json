@@ -733,6 +733,33 @@
         "name": "explosion1-6.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "explosionCrunch_003.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "explosionCrunch_003.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "explosionCrunch_001.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "explosionCrunch_001.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "explosionCrunch_000.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "explosionCrunch_000.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -4268,6 +4295,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_001.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -4353,6 +4394,20 @@
                     "ScrapParticles",
                     "Enemy1.PointX(\"Center\")",
                     "Enemy1.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_001.ogg",
+                    "",
+                    "75",
                     ""
                   ],
                   "subInstructions": []
@@ -9652,6 +9707,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_001.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -9740,6 +9809,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_001.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -9825,6 +9908,20 @@
                     "ScrapParticles",
                     "Enemy1.PointX(\"Center\")",
                     "Enemy1.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_001.ogg",
+                    "",
+                    "75",
                     ""
                   ],
                   "subInstructions": []
@@ -10275,6 +10372,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_000.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -10335,6 +10446,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_000.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -10392,6 +10517,20 @@
                     "OrangeExplosion",
                     "Enemy2.PointX(\"Center\")",
                     "Enemy2.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_000.ogg",
+                    "",
+                    "75",
                     ""
                   ],
                   "subInstructions": []
@@ -16435,6 +16574,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_001.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -16520,6 +16673,20 @@
                     "ScrapParticles",
                     "Enemy1.PointX(\"Center\")",
                     "Enemy1.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_001.ogg",
+                    "",
+                    "75",
                     ""
                   ],
                   "subInstructions": []
@@ -16611,6 +16778,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_001.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -16696,6 +16877,20 @@
                     "ScrapParticles",
                     "Enemy1.PointX(\"Center\")",
                     "Enemy1.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_001.ogg",
+                    "",
+                    "75",
                     ""
                   ],
                   "subInstructions": []
@@ -17146,6 +17341,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_000.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -17203,6 +17412,20 @@
                     "OrangeExplosion",
                     "Enemy2.PointX(\"Center\")",
                     "Enemy2.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_000.ogg",
+                    "",
+                    "75",
                     ""
                   ],
                   "subInstructions": []
@@ -17266,6 +17489,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_000.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -17323,6 +17560,20 @@
                     "OrangeExplosion",
                     "Enemy2.PointX(\"Center\")",
                     "Enemy2.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_000.ogg",
+                    "",
+                    "75",
                     ""
                   ],
                   "subInstructions": []
@@ -17768,6 +18019,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_003.ogg",
+                    "",
+                    "75",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -17812,6 +18077,20 @@
                     "OrangeExplosion",
                     "Enemy3b.PointX(\"Center\")",
                     "Enemy3b.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "explosionCrunch_003.ogg",
+                    "",
+                    "75",
                     ""
                   ],
                   "subInstructions": []
