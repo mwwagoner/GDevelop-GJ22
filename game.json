@@ -659,7 +659,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.8249999999999988,
+        "zoomFactor": 0.8499999999999989,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1882,46 +1882,6 @@
                         "name": "origine",
                         "x": 0,
                         "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "TurretTileEast",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "towerDefense_tile202.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 32.15135192871094,
-                        "y": 32.02162170410156
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -4011,7 +3971,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "UI",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": []
         }
@@ -6058,6 +6018,46 @@
                         "name": "origine",
                         "x": 0,
                         "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "TurretTileWest2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "towerDefense_tile202.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32.15135192871094,
+                        "y": 32.02162170410156
                       },
                       "centerPoint": {
                         "automatic": true,
