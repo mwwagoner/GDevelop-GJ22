@@ -567,6 +567,15 @@
         "name": "bullet2-upgrade-button-export.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "magnet-upgrade-button..png",
+        "kind": "image",
+        "metadata": "",
+        "name": "magnet-upgrade-button..png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -9153,12 +9162,12 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "HealthBonusButton",
-          "persistentUuid": "893a07bc-6616-49f0-bbe4-8c9084751e73",
+          "name": "Bullet2UpgradeButton",
+          "persistentUuid": "1c8d96e2-cdc5-4fd3-8f40-d69b143e2675",
           "width": 0,
-          "x": 477,
-          "y": 198,
-          "zOrder": 2,
+          "x": 712,
+          "y": 201,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9169,12 +9178,12 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "Bullet2UpgradeButton",
-          "persistentUuid": "1c8d96e2-cdc5-4fd3-8f40-d69b143e2675",
+          "name": "MagnetBonusButton",
+          "persistentUuid": "1e745d4e-16ce-48e9-a64f-722cd45df7e2",
           "width": 0,
-          "x": 712,
-          "y": 201,
-          "zOrder": 3,
+          "x": 463,
+          "y": 200,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9300,6 +9309,46 @@
               ]
             }
           ]
+        },
+        {
+          "name": "MagnetBonusButton",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "magnet-upgrade-button..png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -9371,7 +9420,7 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
-                "HealthBonusButton",
+                "MagnetBonusButton",
                 "",
                 "",
                 ""
