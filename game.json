@@ -631,7 +631,7 @@
     {
       "name": "WEST_TURRET_BUILT",
       "type": "boolean",
-      "value": true
+      "value": false
     },
     {
       "name": "SCRAP_MAGNET",
@@ -646,7 +646,7 @@
     {
       "name": "EAST_TURRET_BUILT",
       "type": "boolean",
-      "value": true
+      "value": false
     }
   ],
   "layouts": [
