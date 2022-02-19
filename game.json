@@ -4810,7 +4810,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "HealthIncreaseLabel",
           "persistentUuid": "4d4652a7-1f8f-4f2c-b217-fe01f26ae804",
@@ -4826,12 +4826,12 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "LaserLevel2Label",
           "persistentUuid": "57456564-d63c-4fc6-9659-ce9b1c08a3ef",
           "width": 0,
-          "x": 705,
+          "x": 703,
           "y": 309,
           "zOrder": 5,
           "numberProperties": [],
@@ -10349,6 +10349,38 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "MagnetUpgradeLabel",
+          "persistentUuid": "169df6c5-baf0-4cb8-a8f5-179c044b88c4",
+          "width": 0,
+          "x": 433,
+          "y": 309,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "LaserLevel3Label",
+          "persistentUuid": "13faa755-5a71-4015-9b9e-f3222859bdee",
+          "width": 0,
+          "x": 702,
+          "y": 309,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -10511,6 +10543,46 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "MagnetUpgradeLabel",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Pull scrap to tank",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "LaserLevel3Label",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Laser Level 3",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
