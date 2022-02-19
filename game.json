@@ -20166,8 +20166,8 @@
           "name": "ThankYou",
           "persistentUuid": "98a2c0c4-2a1d-4cdb-bc77-198f62d994ca",
           "width": 0,
-          "x": 460,
-          "y": 151,
+          "x": 365,
+          "y": 125,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -20198,8 +20198,8 @@
           "name": "QuitButton",
           "persistentUuid": "9320fcad-273d-4a88-a88f-329b6f493b7e",
           "width": 0,
-          "x": 521,
-          "y": 456,
+          "x": 520,
+          "y": 525,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -20218,7 +20218,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Thank you for protecting Mars, soldier.",
+          "string": "Thank you for protecting Mars, soldier.\n\nThat should hold them off for a whi... wait. What's that on radar!?\n\nNo, it can't be a ship. It's much too large...",
           "font": "",
           "characterSize": 20,
           "color": {
@@ -20336,6 +20336,40 @@
                 "value": "Quit"
               },
               "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Intergalactic Odyssey.ogg",
+                "",
+                "20",
                 ""
               ],
               "subInstructions": []
