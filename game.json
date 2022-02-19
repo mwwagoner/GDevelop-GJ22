@@ -4939,6 +4939,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 213,
+          "layer": "UI",
+          "locked": false,
+          "name": "UpgradePageTitle",
+          "persistentUuid": "1822b57c-df03-4172-be77-069c7d0eb093",
+          "width": 535,
+          "x": 368,
+          "y": 45,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -5100,6 +5116,24 @@
             "b": 0,
             "g": 0,
             "r": 0
+          }
+        },
+        {
+          "name": "UpgradePageTitle",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "Choose an upgrade",
+            "opacity": 255,
+            "fontSize": 60,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
           }
         }
       ],
@@ -10590,6 +10624,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 213,
+          "layer": "UI",
+          "locked": false,
+          "name": "UpgradePageTitle",
+          "persistentUuid": "3345306b-4e73-4224-a0de-9b180c85d483",
+          "width": 538,
+          "x": 368,
+          "y": 45,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -10791,6 +10841,24 @@
             "b": 0,
             "g": 0,
             "r": 0
+          }
+        },
+        {
+          "name": "UpgradePageTitle",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "Choose an upgrade",
+            "opacity": 255,
+            "fontSize": 60,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
           }
         }
       ],
