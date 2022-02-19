@@ -576,6 +576,15 @@
         "name": "magnet-upgrade-button..png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "towerDefense_tile249.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "towerDefense_tile249.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -622,7 +631,7 @@
     {
       "name": "WEST_TURRET_BUILT",
       "type": "boolean",
-      "value": false
+      "value": true
     },
     {
       "name": "SCRAP_MAGNET",
@@ -637,7 +646,7 @@
     {
       "name": "EAST_TURRET_BUILT",
       "type": "boolean",
-      "value": false
+      "value": true
     }
   ],
   "layouts": [
@@ -4424,7 +4433,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7599999999999998,
+        "zoomFactor": 0.6599999999999997,
         "windowMask": false
       },
       "objectsGroups": [
@@ -6180,6 +6189,53 @@
               ]
             }
           ]
+        },
+        {
+          "name": "LaserTurret",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 2,
+              "HasJustFired": false
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "towerDefense_tile249.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 31.75,
+                        "y": 32.650001525878906
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -7115,8 +7171,8 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "BulletTurret",
+          "folded": false,
+          "name": "Turrets",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -7139,6 +7195,33 @@
                     "Bullet",
                     "Enemies.X()",
                     "Enemies.Y()",
+                    "900",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FireBullet::FireBullet::FireTowardPosition"
+                  },
+                  "parameters": [
+                    "LaserTurret",
+                    "FireBullet",
+                    "LaserTurret.PointX(\"Origin\")",
+                    "LaserTurret.PointY(\"Origin\")",
+                    "LaserBullet",
+                    "Enemy2.X()",
+                    "Enemy2.Y()",
                     "900",
                     ""
                   ],
@@ -7494,7 +7577,7 @@
                   },
                   "parameters": [
                     "",
-                    "BulletTurret",
+                    "LaserTurret",
                     "TurretTileEast.PointX(\"Origin\")",
                     "TurretTileEast.PointY(\"Origin\")",
                     ""
@@ -10207,7 +10290,7 @@
           "width": 0,
           "x": 871,
           "y": 358,
-          "zOrder": 21,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -10623,6 +10706,46 @@
                         "name": "origine",
                         "x": 6.362069129943848,
                         "y": 18.527587890625
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LaserBullet2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "laserGreen10",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "laserGreen10-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -11830,30 +11953,37 @@
           ]
         },
         {
-          "name": "LaserBullet2",
+          "name": "LaserTurret",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 2,
+              "HasJustFired": false
+            }
+          ],
           "animations": [
             {
-              "name": "laserGreen10",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.07999999821186066,
+                  "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "laserGreen10-1.png",
+                      "image": "towerDefense_tile249.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 31.75,
+                        "y": 32.650001525878906
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -11877,7 +12007,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Beginning of Scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12233,7 +12363,7 @@
                   },
                   "parameters": [
                     "",
-                    "BulletTurret",
+                    "LaserTurret",
                     "TurretTileEast.PointX(\"Origin\")",
                     "TurretTileEast.PointY(\"Origin\")",
                     ""
@@ -12297,7 +12427,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12450,7 +12580,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Fire",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -13055,7 +13185,7 @@
           "creationTime": 0,
           "disabled": false,
           "folded": true,
-          "name": "BulletTurret",
+          "name": "Turrets",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -13085,6 +13215,33 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FireBullet::FireBullet::FireTowardPosition"
+                  },
+                  "parameters": [
+                    "LaserTurret",
+                    "FireBullet",
+                    "LaserTurret.PointX(\"Origin\")",
+                    "LaserTurret.PointY(\"Origin\")",
+                    "LaserBullet",
+                    "Enemy2.X()",
+                    "Enemy2.Y()",
+                    "900",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -13095,7 +13252,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Build",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13433,7 +13590,7 @@
                   },
                   "parameters": [
                     "",
-                    "BulletTurret",
+                    "LaserTurret",
                     "TurretTileEast.PointX(\"Origin\")",
                     "TurretTileEast.PointY(\"Origin\")",
                     ""
