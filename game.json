@@ -1006,13 +1006,13 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "QuitButton",
           "persistentUuid": "63d2d2a7-4f1f-454b-8702-dc0748c38cbc",
           "width": 0,
-          "x": 525,
-          "y": 425,
+          "x": 526,
+          "y": 420,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -1339,10 +1339,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Visible"
+                "value": "LayerVisible"
               },
               "parameters": [
-                "StartButton"
+                "",
+                "\"UI\""
               ],
               "subInstructions": []
             }
@@ -1395,10 +1396,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Visible"
+                "value": "LayerVisible"
               },
               "parameters": [
-                "CreditsButton"
+                "",
+                "\"UI\""
               ],
               "subInstructions": []
             }
@@ -1423,72 +1425,6 @@
               "parameters": [
                 "",
                 "\"Credits\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "BackButton",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Visible"
-              },
-              "parameters": [
-                "BackButton"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "HideLayer"
-              },
-              "parameters": [
-                "",
-                "\"Credits\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ShowLayer"
-              },
-              "parameters": [
-                "",
-                "\"UI\""
               ],
               "subInstructions": []
             }
@@ -1527,10 +1463,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Visible"
+                "value": "LayerVisible"
               },
               "parameters": [
-                "QuitButton"
+                "",
+                "\"UI\""
               ],
               "subInstructions": []
             }
@@ -1543,6 +1480,73 @@
               },
               "parameters": [
                 ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BackButton",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"Credits\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"Credits\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"UI\""
               ],
               "subInstructions": []
             }
