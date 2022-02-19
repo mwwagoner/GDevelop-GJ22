@@ -643,6 +643,33 @@
         "name": "quit-button-200px.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "laserSmall_002.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "laserSmall_002.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "laserSmall_000.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "laserSmall_000.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "laserSmall_001.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "laserSmall_001.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -3051,7 +3078,7 @@
                     "",
                     "binary ocean.ogg",
                     "yes",
-                    "20",
+                    "15",
                     ""
                   ],
                   "subInstructions": []
@@ -3221,7 +3248,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Fire",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3274,6 +3301,20 @@
                         ""
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "laserSmall_000.ogg",
+                        "",
+                        "30",
+                        ""
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -3287,7 +3328,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -7553,7 +7594,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Beginning of Scene",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7737,7 +7778,7 @@
                     "",
                     "binary ocean.ogg",
                     "yes",
-                    "20",
+                    "15",
                     ""
                   ],
                   "subInstructions": []
@@ -8130,6 +8171,20 @@
                         ""
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "laserSmall_000.ogg",
+                        "",
+                        "30",
+                        ""
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -8193,6 +8248,20 @@
                         ""
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "laserSmall_001.ogg",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -8206,7 +8275,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -14348,7 +14417,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Fire",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -14420,6 +14489,20 @@
                         "TankBarrel",
                         "FireBullet",
                         ".5",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "laserSmall_000.ogg",
+                        "",
+                        "30",
                         ""
                       ],
                       "subInstructions": []
@@ -14497,6 +14580,20 @@
                         ""
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "laserSmall_001.ogg",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -14560,6 +14657,20 @@
                         ""
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "laserSmall_002.ogg",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -14573,7 +14684,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
