@@ -679,6 +679,60 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion5.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "explosion1-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "explosion1-6.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1504,7 +1558,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7249999999999979,
+        "zoomFactor": 0.6499999999999978,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -2942,6 +2996,131 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "name": "OrangeExplosion",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "explosion1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion1-6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -3118,7 +3297,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3351,7 +3530,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3703,7 +3882,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Build",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3977,7 +4156,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4075,6 +4254,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy1.PointX(\"Center\")",
+                    "Enemy1.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -4118,6 +4311,20 @@
                   },
                   "parameters": [
                     "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy1.PointX(\"Center\")",
+                    "Enemy1.PointY(\"Center\")",
                     ""
                   ],
                   "subInstructions": []
@@ -6377,8 +6584,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 30.600006103515625,
+                        "y": 32.06666946411133
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7624,6 +7831,131 @@
           ]
         },
         {
+          "name": "OrangeExplosion",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "explosion1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion1-6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "additive": false,
           "destroyWhenNoParticles": true,
           "emitterAngleA": 0,
@@ -8035,7 +8367,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8356,7 +8688,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Damage",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9208,7 +9540,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9306,6 +9638,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy1.PointX(\"Center\")",
+                    "Enemy1.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -9349,6 +9695,20 @@
                   },
                   "parameters": [
                     "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy1.PointX(\"Center\")",
+                    "Enemy1.PointY(\"Center\")",
                     ""
                   ],
                   "subInstructions": []
@@ -9423,6 +9783,20 @@
                   },
                   "parameters": [
                     "LaserBullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy1.PointX(\"Center\")",
+                    "Enemy1.PointY(\"Center\")",
                     ""
                   ],
                   "subInstructions": []
@@ -9887,6 +10261,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy2.PointX(\"Center\")",
+                    "Enemy2.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -9933,6 +10321,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy2.PointX(\"Center\")",
+                    "Enemy2.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -9976,6 +10378,20 @@
                   },
                   "parameters": [
                     "LaserBullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy2.PointX(\"Center\")",
+                    "Enemy2.PointY(\"Center\")",
                     ""
                   ],
                   "subInstructions": []
@@ -12351,8 +12767,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 31.4857177734375,
+                        "y": 32.28571319580078
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -12419,14 +12835,14 @@
                       "points": [
                         {
                           "name": "enemy3BulletOrigin",
-                          "x": 48.300018310546875,
-                          "y": 83
+                          "x": 7.399993896484375,
+                          "y": 46.29998779296875
                         }
                       ],
                       "originPoint": {
                         "name": "origine",
-                        "x": 48.300018310546875,
-                        "y": 41.399993896484375
+                        "x": 41.800018310546875,
+                        "y": 51.100006103515625
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -13906,6 +14322,131 @@
                         "name": "origine",
                         "x": 31.75,
                         "y": 32.650001525878906
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "OrangeExplosion",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "explosion1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "explosion1-6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -15782,7 +16323,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Enemy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -15880,6 +16421,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy1.PointX(\"Center\")",
+                    "Enemy1.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -15923,6 +16478,20 @@
                   },
                   "parameters": [
                     "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy1.PointX(\"Center\")",
+                    "Enemy1.PointY(\"Center\")",
                     ""
                   ],
                   "subInstructions": []
@@ -16008,6 +16577,20 @@
                   },
                   "parameters": [
                     "",
+                    "OrangeExplosion",
+                    "Enemy1.PointX(\"Center\")",
+                    "Enemy1.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
                     "Scrap",
                     "Enemy1.X()",
                     "Enemy1.Y()",
@@ -16071,6 +16654,20 @@
                   },
                   "parameters": [
                     "LaserBullet2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy1.PointX(\"Center\")",
+                    "Enemy1.PointY(\"Center\")",
                     ""
                   ],
                   "subInstructions": []
@@ -16535,6 +17132,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy2.PointX(\"Center\")",
+                    "Enemy2.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -16578,6 +17189,20 @@
                   },
                   "parameters": [
                     "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy2.PointX(\"Center\")",
+                    "Enemy2.PointY(\"Center\")",
                     ""
                   ],
                   "subInstructions": []
@@ -16627,6 +17252,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy2.PointX(\"Center\")",
+                    "Enemy2.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -16670,6 +17309,20 @@
                   },
                   "parameters": [
                     "LaserBullet2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy2.PointX(\"Center\")",
+                    "Enemy2.PointY(\"Center\")",
                     ""
                   ],
                   "subInstructions": []
@@ -17101,6 +17754,20 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy3a.PointX(\"Center\")",
+                    "Enemy3a.PointY(\"Center\")",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -17131,6 +17798,20 @@
                   },
                   "parameters": [
                     "Enemy3b",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "OrangeExplosion",
+                    "Enemy3b.PointX(\"Center\")",
+                    "Enemy3b.PointY(\"Center\")",
                     ""
                   ],
                   "subInstructions": []
@@ -17925,7 +18606,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
