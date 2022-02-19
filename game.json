@@ -2821,7 +2821,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2987,11 +2987,11 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "KeyPressed"
+                        "value": "MouseButtonReleased"
                       },
                       "parameters": [
                         "",
-                        "Space"
+                        "Left"
                       ],
                       "subInstructions": []
                     }
@@ -7453,11 +7453,11 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "KeyPressed"
+                        "value": "MouseButtonReleased"
                       },
                       "parameters": [
                         "",
-                        "Space"
+                        "Left"
                       ],
                       "subInstructions": []
                     },
@@ -7516,11 +7516,11 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "KeyPressed"
+                        "value": "MouseButtonReleased"
                       },
                       "parameters": [
                         "",
-                        "Space"
+                        "Left"
                       ],
                       "subInstructions": []
                     },
@@ -13153,7 +13153,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Tank",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13306,7 +13306,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Fire",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -13319,11 +13319,11 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "KeyPressed"
+                        "value": "MouseButtonReleased"
                       },
                       "parameters": [
                         "",
-                        "Space"
+                        "Left"
                       ],
                       "subInstructions": []
                     },
@@ -13393,11 +13393,11 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "KeyPressed"
+                        "value": "MouseButtonReleased"
                       },
                       "parameters": [
                         "",
-                        "Space"
+                        "Left"
                       ],
                       "subInstructions": []
                     },
@@ -13467,11 +13467,11 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "KeyPressed"
+                        "value": "MouseButtonReleased"
                       },
                       "parameters": [
                         "",
-                        "Space"
+                        "Left"
                       ],
                       "subInstructions": []
                     },
