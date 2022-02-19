@@ -760,6 +760,24 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "health-bonus-button-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "health-bonus-button-pressed.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bullet-upgrade-button-pressed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bullet-upgrade-button-pressed.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -5588,7 +5606,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Unpressed",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -5598,6 +5616,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "health-bonus-button.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Pressed",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "health-bonus-button-pressed.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5668,7 +5715,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Unpressed",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -5678,6 +5725,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "bullet-upgrade-button-export.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Pressed",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "bullet-upgrade-button-pressed.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5866,17 +5942,6 @@
                 ""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "BULLET_UPGRADE",
-                ""
-              ],
-              "subInstructions": []
             }
           ],
           "actions": [
@@ -5888,6 +5953,39 @@
               "parameters": [
                 "LIFE_INCREASE",
                 "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "HealthBonusButton",
+                "\"Pressed\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "BulletUpgradeButton",
+                "\"Unpressed\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "BULLET_UPGRADE",
+                "False"
               ],
               "subInstructions": []
             }
@@ -5922,17 +6020,6 @@
                 ""
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "LIFE_INCREASE",
-                ""
-              ],
-              "subInstructions": []
             }
           ],
           "actions": [
@@ -5944,6 +6031,39 @@
               "parameters": [
                 "BULLET_UPGRADE",
                 "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "HealthBonusButton",
+                "\"Unpressed\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "BulletUpgradeButton",
+                "\"Pressed\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetGlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "LIFE_INCREASE",
+                "False"
               ],
               "subInstructions": []
             }
