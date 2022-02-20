@@ -796,6 +796,69 @@
         "name": "bullet2-upgrade-button-pressed.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "start-button-200px2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "start-button-200px2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Credits-button-200px2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Credits-button-200px2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "quit-button-200px2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "quit-button-200px2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "back-button-200px2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "back-button-200px2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "star1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "star1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "star2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "star2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "star3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "star3.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -862,18 +925,18 @@
   ],
   "layouts": [
     {
-      "b": 255,
+      "b": 0,
       "disableInputWhenNotFocused": true,
       "mangledName": "TitleScreen",
       "name": "TitleScreen",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
-      "r": 231,
+      "r": 0,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 203,
+      "v": 0,
       "uiSettings": {
         "grid": false,
         "gridType": "rectangular",
@@ -884,7 +947,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.9749999999999999,
+        "zoomFactor": 0.6249999999999996,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1033,6 +1096,134 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "Star1",
+          "persistentUuid": "91aff793-3356-4c4d-8415-3075b6e3d30a",
+          "width": 0,
+          "x": 1012,
+          "y": 439,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "Star2",
+          "persistentUuid": "b31eb80d-3154-4eeb-a081-3508df68b4d3",
+          "width": 0,
+          "x": 838,
+          "y": 263,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "Star3",
+          "persistentUuid": "e105577e-22d3-417b-bada-3dceceef8b40",
+          "width": 0,
+          "x": 235,
+          "y": 558,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "Star3",
+          "persistentUuid": "c081b94c-6fb3-4f4c-bdca-3b1434001953",
+          "width": 0,
+          "x": 1127,
+          "y": 106,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "Star2",
+          "persistentUuid": "b93887d5-f53d-4d27-b80f-390115bf4586",
+          "width": 0,
+          "x": 350,
+          "y": 357,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "Star1",
+          "persistentUuid": "8783f7c6-13da-4d7c-b9ea-adbb2cd34aa8",
+          "width": 0,
+          "x": 56,
+          "y": 45,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "Star2",
+          "persistentUuid": "a4e1318a-d096-4b1c-b0d8-ec54e14d623b",
+          "width": 0,
+          "x": 886,
+          "y": 659,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "Star1",
+          "persistentUuid": "674f5b72-ecf6-4362-896e-41e8c24dadeb",
+          "width": 0,
+          "x": 459,
+          "y": 43,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -1051,9 +1242,9 @@
           "font": "",
           "characterSize": 60,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -1075,7 +1266,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "start-button-200px.png",
+                      "image": "start-button-200px2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1091,6 +1282,17 @@
                       "customCollisionMask": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "name": "Pressed",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": []
                 }
               ]
             }
@@ -1115,7 +1317,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Credits-button-200px.png",
+                      "image": "Credits-button-200px2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1155,7 +1357,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "quit-button-200px.png",
+                      "image": "quit-button-200px2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1195,7 +1397,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "back-button-200px.png",
+                      "image": "back-button-200px2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1219,26 +1421,6 @@
         {
           "bold": false,
           "italic": false,
-          "name": "SFX",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "SFX by Kenney (www.kenney.nl)",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
           "name": "GameDesign",
           "smoothed": true,
           "tags": "",
@@ -1251,9 +1433,9 @@
           "font": "",
           "characterSize": 20,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -1271,9 +1453,29 @@
           "font": "",
           "characterSize": 20,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "SFX",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "SFX by Kenney (www.kenney.nl)",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -1291,10 +1493,130 @@
           "font": "",
           "characterSize": 20,
           "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+            "b": 255,
+            "g": 255,
+            "r": 255
           }
+        },
+        {
+          "name": "Star1",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "star1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Star2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "star2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Star3",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "star3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -1620,7 +1942,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Credits",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": []
         },
