@@ -2027,7 +2027,7 @@
           "height": 212,
           "layer": "",
           "locked": false,
-          "name": "NewObject",
+          "name": "Story",
           "persistentUuid": "0385f5ca-ab77-4876-a2b8-a863b7e52435",
           "width": 427,
           "x": 418,
@@ -2076,14 +2076,14 @@
           }
         },
         {
-          "name": "NewObject",
+          "name": "Story",
           "tags": "",
           "type": "BBText::BBText",
           "variables": [],
           "effects": [],
           "behaviors": [],
           "content": {
-            "text": "Our colony on Mars went dark, and now we need to land and restore power. You're going in to bring power back online. It's doubtful that you'll need it, but we're sending you in with some firepower.  It never hurts to be safe.\n\nGood luck.",
+            "text": "Our colony on Mars went dark, and now we need to restore communications. You're going in to bring power back online. It's doubtful that you'll need it, but we're sending you in with some firepower.  It never hurts to be safe.\n\nGood luck.",
             "opacity": 255,
             "fontSize": 20,
             "visible": true,
